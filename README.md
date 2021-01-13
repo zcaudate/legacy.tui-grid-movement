@@ -15,20 +15,3 @@ make dev
 ``` shell
 make package
 ```
-
-# Makefile
-
-``` makefile
-dist
-node_modules
-yarn.lock
-```
-
-``` makefile
-dev:
-    yarn dev
-package:
-    yarn package
-init:
-    yarn install
-```
