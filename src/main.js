@@ -1,8 +1,8 @@
-import _ from 'lodash';
-import {useImmer} from 'use-immer';
-import React,{useState} from 'react';
-import blessed from 'blessed';
-import {render} from 'react-blessed'
+import { useImmer } from "use-immer";
+import React, { useState } from "react";
+import blessed from "blessed";
+import { render } from "react-blessed";
+import _ from "lodash";
 
 function Screen() {
   const screen = blessed.screen({
@@ -15,7 +15,6 @@ function Screen() {
   });
   return screen;
 }
-
 
 function GridControl(props) {
   return (
@@ -74,7 +73,6 @@ function GridControl(props) {
   );
 }
 
-
 function App() {
   const [global, updateGlobal] = useImmer({ x: 4, y: 4 });
   const fns = _.mapValues(
@@ -116,10 +114,8 @@ function App() {
   );
 }
 
-
 function main() {
   render(<App></App>, Screen());
 }
-
 
 main()
